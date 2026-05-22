@@ -36,6 +36,7 @@ theme: minima
 #   quiet_deps: true
 #   silence_deprecations: [import]
 
+markdown: GFM
 
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
