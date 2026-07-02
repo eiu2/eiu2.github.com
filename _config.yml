@@ -37,8 +37,6 @@ theme: minima
 #   silence_deprecations: [import]
 
 markdown: gfm
-  
-paginate: 50
 
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
