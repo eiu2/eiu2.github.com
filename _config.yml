@@ -38,6 +38,8 @@ theme: minima
 
 markdown: gfm
 
+pagenate: 50
+
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
 #
