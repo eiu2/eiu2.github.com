@@ -37,12 +37,8 @@ theme: minima
 #   silence_deprecations: [import]
 
 markdown: gfm
-
-# plugins:
-#   - jekyll-paginate
   
-paginate: 50 # 1ページあたりの記事数
-# paginate_path: "/page:num/" # ページネーションのURL構造
+paginate: 50
 
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
