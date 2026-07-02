@@ -39,7 +39,7 @@ theme: minima
 markdown: gfm
 
 paginate: 25 # 1ページあたりの記事数
-paginate_path: "/page:num/" # ページネーションのURL構造
+# paginate_path: "/page:num/" # ページネーションのURL構造
 
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
