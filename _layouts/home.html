@@ -2,56 +2,37 @@
 layout: base
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in pagenator.posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-          {{ post.excerpt }}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li>
-            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page" title="Go to Page {{ paginator.previous_page }}">
-              {{ paginator.previous_page }}
-            </a>
-          </li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li>
-            <a href="{{ paginator.next_page_path | relative_url }}" class="next-page" title="Go to Page {{ paginator.next_page }}">
-              {{ paginator.next_page }}
-            </a>
-          </li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-  {%- endif -%}
+<!-- 1. 25記事分のリストを表示 -->
+<div class="post-list">
+  {% for post in paginator.posts %}
+    <article class="post-item">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+    </article>
+  {% endfor %}
 </div>
+
+<!-- 2. ページ移動用のナビゲーション -->
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" style="margin-top: 20px; display: flex; gap: 15px; align-items: center;">
+  
+  <!-- 「前へ」ボタン -->
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; 前へ</a>
+  {% else %}
+    <span style="color: #ccc;">&laquo; 前へ</span>
+  {% endif %}
+
+  <!-- 現在のページ / 全ページ数 -->
+  <span>{{ paginator.page }} / {{ paginator.total_pages }}</span>
+
+  <!-- 「次へ」ボタン -->
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">次へ &raquo;</a>
+  {% else %}
+    <span style="color: #ccc;">次へ &raquo;</span>
+  {% endif %}
+
+</nav>
+{% endif %}
+
