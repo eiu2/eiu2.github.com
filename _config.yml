@@ -38,9 +38,6 @@ theme: minima
 
 markdown: gfm
 
-paginate: 5
-paginate_path: "/page:num/"
-
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
 #
