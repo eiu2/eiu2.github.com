@@ -42,8 +42,8 @@ plugins:
 
 markdown: gfm
 
-paginate: 25
-paginate_path: "/page:num/"
+# paginate: 25
+# paginate_path: "/page:num/"
 
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
