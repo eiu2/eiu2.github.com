@@ -30,8 +30,8 @@ theme: minima
 #  - jekyll-feed
 #  - jekyll-seo-tag
 
-# plugins:
-# - jekyll-paginate
+plugins:
+ - jekyll-paginate
  
 #
 # Uncomment the following setting if you wish to disable deprecation warnings
@@ -42,8 +42,8 @@ theme: minima
 
 markdown: gfm
 
-# paginate: 25
-# paginate_path: "/page:num/"
+paginate: 25
+paginate_path: "/page:num/"
 
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
