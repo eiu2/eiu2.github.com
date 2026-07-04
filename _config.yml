@@ -30,8 +30,8 @@ theme: minima
 #  - jekyll-feed
 #  - jekyll-seo-tag
 
-plugins:
- - jekyll-paginate
+# plugins:
+# - jekyll-paginate
  
 #
 # Uncomment the following setting if you wish to disable deprecation warnings
