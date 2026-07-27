@@ -40,7 +40,7 @@ plugins:
 #   quiet_deps: true
 #   silence_deprecations: [import]
 
-markdown: gfm
+# markdown: gfm
 
 paginate: 25
 paginate_path: "/page:num/"
